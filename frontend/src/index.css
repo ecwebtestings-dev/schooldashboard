@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import 'tailwindcss';
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root {
+  --bg: #F3F8FC;              /* page background */
+  --card: #FFFFFF;            /* cards, modals, inputs */
+  --heading: #001D39;         /* h1-h6, strong text */
+  --body: #49769F;            /* paragraphs */
+  --muted: #6EA2B3;           /* captions, placeholders, small labels */
+  --primary: #0A4174;         /* main buttons, links */
+  --primary-hover: #001D39;   /* hover state of primary */
+  --on-primary: #FFFFFF;      /* text on top of primary */
+  --accent: #4E8EA2;          /* secondary buttons, icons, badges */
+  --highlight: #7BBDE8;       /* focus rings, active states, highlights */
+  --nav: #BDD8E9;             /* navbar when scrolled */
+  --border: #BDD8E9; 
+        /* dividers, card borders */
+}
+
+[data-theme="dark"] {
+  --bg: #001D39;
+  --card: #06294B;
+  --heading: #BDD8E9;
+  --body: #6EA2B3;
+  --muted: #49769F;
+  --primary: #7BBDE8;
+  --primary-hover: #BDD8E9;
+  --on-primary: #001D39;      /* dark text on the light-blue button #06294B*/ 
+  --accent: #4E8EA2;
+  --highlight: #7BBDE8;
+  --nav: #0A4174;
+  --border: #0A4174;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
+  --color-accent: var(--accent);
+  --color-highlight: var(--highlight);
+  --color-nav: var(--nav);
+  --color-border: var(--border);
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;   
+  scrollbar-width: none;     
+
+  &::-webkit-scrollbar {      
+    display: none;
+  }
+}
